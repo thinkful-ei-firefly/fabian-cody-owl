@@ -3,9 +3,10 @@ import './App.css';
 import Store from "./Store"
 import Participant from './Participant'
 import Stage from "./Stage";
+import Chat from "./Chat"
 
 function App() {
-  const participant = Store.participants.map(participant => {
+  const participants = Store.participants.filter(participant => participant.inSession).map(participant => {
     return <Participant
       key={participant.id}
       name={participant.name}
@@ -22,10 +23,21 @@ function App() {
     )
   })
 
+  const chat = Store.chatEvents.map(chatEvent => {
+    return <Chat
+      participant={Store.participants.find(participant => participant.id===chatEvent.participantId)}
+      message={chatEvent.message}
+      type={chatEvent.type}
+      time={chatEvent.time}
+      timestamp={chatEvent.timestamp}
+    />
+  });
+
   return (
     <div>
-      <div>{participant}</div>
+      <div className='participant-list'>{participants}</div>
       <div>{onStage}</div>
+      <div>{chat}</div>
     </div>
   );
 }
