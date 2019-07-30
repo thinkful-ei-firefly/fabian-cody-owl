@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Participant /> Render Participant Snap 1`] = `
+<div
+  className="participant"
+>
+  <img
+    alt="avatar"
+    src="path"
+  />
+  <p>
+    Mark
+  </p>
+  <p>
+    on stage
+  </p>
+</div>
+`;
