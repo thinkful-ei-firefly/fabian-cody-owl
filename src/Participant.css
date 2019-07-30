@@ -1,0 +1,19 @@
+.participant-list{
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+}
+
+.participant{
+  text-align: center;
+}
+
+.participant p{
+  margin: 3px;
+}
+
+.participant-list img{
+  border-radius: 50%; 
+  width:60px; 
+  height:60px; 
+}

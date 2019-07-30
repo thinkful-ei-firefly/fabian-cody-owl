@@ -1,0 +1,32 @@
+.chat{
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+}
+
+.chat-message{
+  display: flex;
+  border-color: aqua;
+  flex-direction: row;
+}
+
+.chat-message img {
+  border-radius: 50%; 
+  width:40px; 
+  height:40px; 
+}
+
+.chat-message p, h4{
+  margin: 2px;
+}
+
+.system-message{
+  display: flex;
+  color: rgb(88, 88, 88);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.system-message *{
+  border: none;
+}

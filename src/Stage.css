@@ -1,0 +1,11 @@
+.stage{
+  display: flex;
+  background-color: lightgray;
+  flex-grow: 3;
+}
+
+.stage-participant{
+  background-color: lightgray;
+  width: 50%;
+  text-align: center;
+}

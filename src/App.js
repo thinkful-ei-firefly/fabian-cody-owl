@@ -5,6 +5,7 @@ import Participant from './Participant'
 import Stage from "./Stage";
 import Chat from "./Chat"
 
+
 function App() {
   const participants = Store.participants.filter(participant => participant.inSession).map(participant => {
     return <Participant
@@ -34,10 +35,10 @@ function App() {
   });
 
   return (
-    <div>
+    <div className='container'>
       <div className='participant-list'>{participants}</div>
-      <div>{onStage}</div>
-      <div>{chat}</div>
+      <div className='chat'>{chat}</div>
+      <div className='stage'>{onStage}</div>
     </div>
   );
 }
