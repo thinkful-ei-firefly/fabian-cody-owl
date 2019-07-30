@@ -1,25 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Participant from './Participant'
+import Store from "./Store"
 
 function App() {
+  console.log(Store.participants);
+  const participant = Store.participants.map(participant => {
+    console.log(participant);
+    return <Participant 
+      key={participant.id} 
+      name={participant.name}
+      avatar={participant.avatar}
+      inSession={participant.inSession}
+      onStage={participant.onStage}
+    />
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>{participant}</div>
   );
 }
 
