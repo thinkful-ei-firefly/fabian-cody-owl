@@ -4,6 +4,7 @@ import './Chat.css';
 class Chat extends React.Component {
 
 	render() {
+
 		const date = new Date(this.props.timestamp);
 		const time = date.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true, minute: 'numeric' });
 

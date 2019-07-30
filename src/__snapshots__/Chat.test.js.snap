@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Chat.js /> Renders <Chat.js /> as expected 1`] = `
+<div
+  className="system-message"
+>
+  <span>
+    Axe Kubicka
+  </span>
+  <div>
+    '
+    thumbs-up
+    '
+  </div>
+</div>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stage />  Renders <Stage /> as expected 1`] = `
+<div
+  className="stage-participant"
+>
+  <h2>
+    Hohn Smith
+  </h2>
+  <img
+    alt="avatar"
+    src="www.avatar.com"
+  />
+</div>
+`;
