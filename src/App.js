@@ -1,15 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Participant from './Participant'
 import Store from "./Store"
+import Participant from './Participant'
+import Stage from "./Stage";
 
 function App() {
-  console.log(Store.participants);
   const participant = Store.participants.map(participant => {
-    console.log(participant);
-    return <Participant 
-      key={participant.id} 
+    return <Participant
+      key={participant.id}
       name={participant.name}
       avatar={participant.avatar}
       inSession={participant.inSession}
@@ -17,8 +15,18 @@ function App() {
     />
   });
 
+  let onStage = Store.participants.filter(participant => participant.onStage)
+  onStage = onStage.map(participant => {
+    return (
+      <Stage key={participant.id} name={participant.name} avatar={participant.avatar} />
+    )
+  })
+
   return (
-    <div>{participant}</div>
+    <div>
+      <div>{participant}</div>
+      <div>{onStage}</div>
+    </div>
   );
 }
 
